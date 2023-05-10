@@ -7,6 +7,10 @@ Clone the GitHub repository to your computer
 
 # Usage
 
+Run:
+```bash
+python manage.py runserver
+```
 Open your browser and access the address http://localhost:8000/
 
 To access the administration area, access the address http://localhost:8000/admin/ and login with the administrator credentials (username: admin and password: admin).
