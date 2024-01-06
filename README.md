@@ -1,16 +1,19 @@
-# IGS Employee Manager
-This is a project created as part of the IGS challenge for the Django framework. The goal of this project is to create a web application for managing employee information.
+# Employee Manager
+
+This is a project created to showcase my skills in the Django framework. The objective of this project is to develop a web application for managing employee information.
 
 # Installation
 
-Clone the GitHub repository to your computer 
+Clone the GitHub repository to your computer
 
 # Usage
 
 Run:
+
 ```bash
 python manage.py runserver
 ```
+
 Open your browser and access the address http://localhost:8000/
 
 To access the administration area, access the address http://localhost:8000/admin/ and login with the administrator credentials (username: admin and password: admin).
@@ -40,6 +43,7 @@ response = requests.get(url)
 
 print(response.json())
 ```
+
 This will return a JSON object containing all employees in the database.
 
 #### Add a new employee
@@ -79,21 +83,27 @@ response = requests.get(url)
 
 print(response.json())
 ```
+
 This will return a JSON object containing all departments in the database.
 
 #### Add a new department
+
 ```python
+
 url = 'http://localhost:8000/department/'
 
-data = {'name': 'IT'}
+data = json.dumps({'name': 'IT'})
 
 response = requests.post(url, data=data)
 
 print(response.json())
+
 ```
+
 This will return a successful message.
 
 #### Delete a department
+
 ```python
 url = 'http://localhost:8000/department/'
 
@@ -103,4 +113,5 @@ response = requests.delete(url, params=params)
 
 print(response.json())
 ```
+
 This will return a successful message.
